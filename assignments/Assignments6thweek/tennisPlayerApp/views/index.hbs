@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to ExpresJS!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h2>Tennis Players App</h2>
+                <hr>
+                <p>Welcome {{userName}}</p>
+
+        <div class="row">
+            <div class="offset-md-2 col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each players}}
+
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{country}}</td>
+
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+                <form action="/players" method="POST">
+                    <label>
+                        Enter player name: <input name="Name" type="text" class="form-control">
+                    </label>
+                    <br>
+                    <label>
+                        Enter player Country: <input name="Country" type="text" class="form-control">
+                    </label>
+                    <br>
+                    <button type="submit" class="btn btn-info">Add Player</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
