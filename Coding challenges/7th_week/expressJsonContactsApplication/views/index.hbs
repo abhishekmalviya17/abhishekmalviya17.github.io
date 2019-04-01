@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ContactsApp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each contact}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{phone}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <h1>Contacts App</h1>
+                <hr>
+                <form action="/contacts" method="POST">
+                    <div class="form-group">
+                        <label for="inputName">Name
+                            <input type="text" class="form-control" id="inputName" name="inputName">
+                        </label>
+                        <label for="inputPhone">Phone Number
+                            <input type="number" class="form-control" id="inputPhone" name="inputPhone">
+                        </label>
+                        <button type="submit" class="btn btn-info">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

@@ -16,6 +16,7 @@ app.get("/players",function(req,res){
         players:Players,
         userName : "Abhishek"
     }
+    console.log(Players);
     res.render("index.hbs",data);
 });
 
@@ -29,4 +30,4 @@ app.post("/players", function(req, res) {
 
 });
 
-app.listen(3000);
+app.listen(3050);
