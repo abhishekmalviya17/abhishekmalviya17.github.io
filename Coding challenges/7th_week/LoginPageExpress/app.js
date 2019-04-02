@@ -22,7 +22,6 @@ res.render("index.hbs")
 })
 
 app.post("/login",function(req,res){
-    var DB={};
     username=req.body.EmailID;
     password=req.body.Password;
 
@@ -31,7 +30,7 @@ app.post("/login",function(req,res){
       for(var i=0;i<userDB.length;i++){
           if(username==userDB.name[i]&&password==userDB.password[i]){
               alert("Logged in");
-              res.redirect("/login")
+             
               
           }
           else{
