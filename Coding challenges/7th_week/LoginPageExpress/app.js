@@ -15,7 +15,7 @@ var userDB = [
     {name: "divyam", password: "divyam123"}
   ];
 
-app.get("/login",function(req,res){
+app.get("/",function(req,res){
 
 res.render("index.hbs")
     
