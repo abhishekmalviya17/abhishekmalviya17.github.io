@@ -1,15 +1,18 @@
 //Program to generate fibbonaci series
 
 function fibbonaci(n){
-	a=0;b=1;f=1;
+	firstnum=0;secondnum=1;sum=1;
 	console.log(a);
     console.log(b);
+	var series=[]
 	for(i=0;i<=n;i++){
-		f=a+b;
-		a=b;
-		b=f;
-		console.log(f);
+		sum=firstnum+secondnum;
+		series.push(sum);
+		firstnum=secondnum;
+		secondnum=sum;
+		
 	}
+	return sum;
 	
 }
 
