@@ -22,22 +22,22 @@ res.render("index.hbs")
 })
 
 app.post("/login",function(req,res){
-    username=req.body.EmailID;
-    password=req.body.Password;
+   let username=req.body.EmailID;
+   let password=req.body.Password;
 
    
 
       for(var i=0;i<userDB.length;i++){
-          if(username==userDB.name[i]&&password==userDB.password[i]){
-              alert("Logged in");
-             
+          if((username==(userDB[i].name))&&(password==(userDB[i].password))){
+              
+            res.send("Login Success");
               
           }
           else{
-              alert("wrong password or userID");
+            res.redirect("/");
           }
       }
-})
+});
 
 
 app.listen(3050);
