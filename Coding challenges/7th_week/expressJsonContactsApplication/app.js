@@ -9,8 +9,8 @@ app.use(parser.urlencoded({extended:false}));
 
 var contacts=[];
 
-app.get("/contacts",function(req,res){
-    console.log(contacts);
+app.get("/",function(req,res){
+    
     var data={
         
         contact:contacts
@@ -20,14 +20,14 @@ app.get("/contacts",function(req,res){
 })
 
 app.post("/contacts",function(req,res){
-    var Contacts={};
-    Contacts.name=req.body.inputName;
+    var newContacts={};
+    newContacts.name=req.body.inputName;
     
-    Contacts.phone=req.body.inputPhone;
+    newContacts.phone=req.body.inputPhone;
    
-    contacts.push(Contacts);
+    contacts.push(newContacts);
     
-    res.redirect("/contacts");
+    res.redirect("/");
 
 })
 
