@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <h2>Book Store</h2>
+                <hr>
+                <form action="/" method="POST">
+                    <div class="form-group">
+                        <label for="">Enter Language</label>
+                        <input name="language" type="text" class="form-control" id="language" placeholder="Language">
+                    </div>
+
+                    <button type="submit" class="btn btn-info" id="button">Search</button>
+
+                    <p>
+                        <br>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Author</th>
+                            <th>Country</th>
+                            <th>ImageLink</th>
+                            <th>Language</th>
+                            <th>Link</th>
+                            <th>Pages</th>
+                            <th>Title</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbody">
+                        {{#each books}}
+                        <tr>
+                            <td>{{author}}</td>
+                            <td>{{country}}</td>
+                            <td>{{imageLink}}</td>
+                            <td>{{language}}</td>
+                            <td>{{link}}</td>
+                            <td>{{pages}}</td>
+                            <td>{{title}}</td>
+                            <td>{{year}}</td>
+                        </tr>
+                        {{/each }}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

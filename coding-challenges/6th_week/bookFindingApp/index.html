@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books and Language</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <h1>Book Store</h1>
+                <hr>
+
+                <div class="form-group">
+                    <label for="">Language</label>
+                    <input type="text" class="form-control" id="language" placeholder="Language">
+                </div>
+
+                <button type="button" class="btn btn-outline-success" id="button">Search</button>
+
+                <p>
+                    <br>
+                </p>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Country of origin</th>
+                            <th>link</th>
+                            <th>Pages</th>
+                            <th>Title</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbody"></tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

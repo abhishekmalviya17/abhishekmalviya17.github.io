@@ -1,0 +1,7 @@
+Idea - I want to convert the blog into a private blog.
+
+
+TODOs - 
+
+1. Restrict only logged in users to the site.
+2. Users should be able to see/edit/delete only their own posts.
